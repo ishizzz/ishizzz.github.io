@@ -1,0 +1,304 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway&display=swap");
+
+/* Global styles */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+:root {
+  --intro-email-bg: hsl(217, 28%, 15%);
+  --main-bg: hsl(218, 28%, 13%);
+  --footer-bg: hsl(216, 53%, 9%);
+  --cyan: hsl(176, 68%, 64%);
+  --blue: hsl(198, 60%, 50%);
+  --white: hsl(0, 0%, 100%);
+}
+
+html {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  color: var(--white);
+  background: var(--main-bg);
+}
+
+h2,
+h3,
+nav,
+.cta {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+h2 {
+  font-size: 60px;
+  font-weight: 800;
+}
+h3 {
+  font-size: 48px;
+  font-weight: 800;
+}
+
+main {
+  position: relative;
+  padding-bottom: 200px;
+}
+
+/* nav style */
+
+.nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 73px 80px;
+  background: var(--intro-email-bg);
+}
+
+.nav-items {
+  display: flex;
+  align-items: center;
+}
+
+.nav-items :not(:last-child) {
+  padding-right: 56px;
+}
+
+/* hero section */
+.hero {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  text-align: center;
+  width: 100%;
+  min-height: 100vh;
+  background: var(--intro-email-bg) url("images/bg-curvy-desktop.svg") bottom
+    no-repeat;
+  background-size: 100% 270px;
+}
+
+.hero img {
+  width: 600px;
+  height: 538px;
+}
+
+.hero h2 {
+  width: 742px;
+  margin: 46px;
+}
+
+.hero p {
+  width: 742px;
+  font-size: 22px;
+  padding: 0 30px;
+}
+
+.cta {
+  color: var(--white);
+  width: 280px;
+  padding: 20px 0;
+  border-radius: 50px;
+  margin: 30px 0;
+  background: linear-gradient(to right, var(--cyan), var(--blue));
+  border: none;
+}
+
+/* skills section */
+.skills {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 94px 150px;
+  margin: 130px 0;
+  padding: 0 280px;
+}
+
+.feature {
+  text-align: center;
+}
+
+.feature h3 {
+  margin: 25px 0 12px 0;
+}
+
+/* footer */
+
+footer {
+  background: var(--footer-bg);
+  padding: 100px 80px 80px 500px;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 4fr 3fr 1fr 1fr 2fr;
+  grid-template-rows: auto;
+  /* column-gap: 70px; */
+  grid-template-areas:
+    "logo . . . ."
+    "location  contact links more-links social-icons";
+}
+#contact{
+  text-align: center;
+}
+
+.footer-contact {
+  grid-area: contact;
+}
+
+.footer-contact p {
+  margin-bottom: 26px;
+}
+
+.footer-contact img {
+  margin-right: 24px;
+}
+
+.social-icons {
+  grid-area: social-icons;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.social-icons i {
+  font-size: 40px;
+}
+
+body {
+  padding: 2em;
+}
+#container {
+  width: 200px;
+  height: 200px;
+  margin: 10px auto;
+  border: 1px ridge #000;
+  position: relative;
+  border-radius: 50%;
+  animation: spin 10s linear infinite;
+}
+.item {
+  width: 60px;
+  height: 60px;
+  line-height: 55px;
+  text-align: center;
+  border-radius: 75%;
+  position: absolute;
+  background: rgb(199, 75, 96);
+  animation: spin 10s linear infinite reverse;
+}
+  
+@keyframes spin {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+ 
+
+#color:hover .blue {
+  color: rgb(70, 136, 167);
+}
+
+#color span {
+    transition: all 0.35s ease;
+}
+
+#color:hover .red {
+  color: rgb(185, 63, 63);
+}
+
+#color:hover .yellow {
+  color: rgb(212, 212, 72);
+}
+
+#color:hover .green {
+  color: rgb(81, 206, 133);
+}
+#color:hover .pink {
+  color: rgb(227, 114, 231);
+}
+#color:hover .purple {
+  color: rgb(124, 71, 167);
+}
+#color:hover .orange {
+  color: rgb(167, 109, 42);
+}
+.tab { 
+  display:inline-block; 
+  margin-left: 40px; 
+}
+ #about{
+   line-height: 35px;
+ }
+ #colorspan{
+ }
+#about{
+  padding: 23px;
+}
+a:hover .nav-link{ 
+  animation:  shake 0.8s  ; 
+} 
+
+
+.nav1:hover
+{animation:  shake 0.8s  ; 
+
+  }
+@keyframes shake{ 
+    0%{ 
+      transform: translateX(0) 
+    } 
+    25%{ 
+      transform: translateX(25px); 
+    } 
+      
+    50%{ 
+      transform: translateX(-25px); 
+    } 
+    100%{ 
+      transform: translateX(0px); 
+    } 
+  }
+
+  img.meme{
+    float: right;
+    width: 350px;
+    height:500px;
+
+  }
+  .para{
+    float: left;
+  }
+  #footer{
+    clear: both;
+  }
+  .column{
+    float: left;
+    width: 50%;
+    padding: 5px;
+  }
+
+  .me{
+    margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  height: 400px;
+  }
+  .tagline{
+    padding: 50px 10px 10px 5px;
+  }
